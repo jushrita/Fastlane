@@ -25,6 +25,11 @@ Push a new release build to the App Store
 fastlane beta
 ```
 
+### beforeDistribution
+```
+fastlane beforeDistribution
+```
+
 
 ----
 

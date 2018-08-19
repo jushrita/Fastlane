@@ -29,9 +29,11 @@ end
   end
 
   lane :beta do
-     cert
-     sigh(force:true)
-     gym(scheme: "FastlaneTest",
+    cert
+    sigh(force:true)
+
+     
+    gym(scheme: "FastlaneTest",
 	output_name: "NewGymBuild.ipa",
 	export_method: "app-store",
 	export_options: {
@@ -53,3 +55,20 @@ end
 	itc_provider: "DWLB7GQMW9")  
 	
    end
+
+  lane :beforeDistribution do
+     sh("git checkout develop")
+     sh "bash /script.sh"
+     git_pull
+     ensure_git_status_clean
+     #ensure_git_branch(branch: "develop")
+     sh("git checkout -b buildBumpBranch")
+     sh "bash /script.sh"
+     cert
+     sigh(force:true)
+     build_app(scheme:"FastlaneTest")
+     increment_build_number(xcodeproj: "FastlaneTest.xcodeproj")
+     commit_version_bump(message: "Build Version Bump by fastlane",
+	                 xcodeproj: "FastlaneTest.xcodeproj")
+     push_to_git_remote
+   end	
