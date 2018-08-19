@@ -61,7 +61,8 @@ end
      sh "bash /script.sh"
      git_pull
      ensure_git_status_clean
-     #ensure_git_branch(branch: "develop")
+     ensure_git_branch(branch: "develop")
+
      sh("git checkout -b buildBumpBranch")
      sh "bash /script.sh"
      cert
