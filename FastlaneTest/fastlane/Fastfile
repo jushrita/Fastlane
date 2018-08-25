@@ -24,8 +24,9 @@ end
 
   desc "Push a new release build to the App Store"
   lane :release do
-    build_app(scheme: "FastlaneTest")
-    upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+    #build_app(scheme: "FastlaneTest")
+    #upload_to_app_store(skip_metadata: true, skip_screenshots: true)
+    deliver(precheck_default_rule_level: error)
   end
 
   lane :beta do
@@ -58,18 +59,24 @@ end
 
   lane :beforeDistribution do
      sh("git checkout develop")
-     sh "bash /script.sh"
-     git_pull
+     sh("git pull origin develop")
      ensure_git_status_clean
      ensure_git_branch(branch: "develop")
+     sh("git checkout buildBumpBranch1")
 
-     sh("git checkout -b buildBumpBranch")
-     sh "bash /script.sh"
      cert
      sigh(force:true)
-     build_app(scheme:"FastlaneTest")
+     build_app(scheme:"FastlaneTest",
+			sdk: "iOS 11.4"	)
+     get_build_number
      increment_build_number(xcodeproj: "FastlaneTest.xcodeproj")
+     sh("git add .")
+     sh("git commit -m 'Version bumped'")
      commit_version_bump(message: "Build Version Bump by fastlane",
 	                 xcodeproj: "FastlaneTest.xcodeproj")
      push_to_git_remote
+     create_pull_request(repo: "Jushrita/Fastlane",
+			title: "build no. bumped",
+			head: "buildBumpBranch1",
+			base: "develop")
    end	
