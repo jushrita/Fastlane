@@ -63,15 +63,15 @@ end
      #ensure_git_branch(branch: "develop")
      #sh("git checkout buildBumpBranch")
 
-     cert
-     sigh(force:true)
-     build_app(scheme:"FastlaneTest",
-		sdk: "iOS 11.4"	)
+     #cert
+     #sigh(force:true)
+     #build_app(scheme:"FastlaneTest",
+	#		sdk: "iOS 11.4"	)
      get_build_number
      increment_build_number(xcodeproj: "FastlaneTest.xcodeproj")
      sh("git add .")
      sh("git commit -m 'Fastfile changes'")
-     sh("git push origin buildBumpBranch")
+     push_to_git_remote
      commit_version_bump(message: "Build Version Bump by fastlane",
 	                 xcodeproj: "FastlaneTest.xcodeproj")
      push_to_git_remote
