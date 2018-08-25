@@ -58,11 +58,14 @@ end
    end
 
   lane :beforeDistribution do
+     sh("git add .")
+     sh("git commit -m 'Version bumped'")
+     push_to_git_remote
      sh("git checkout develop")
      sh("git pull origin develop")
      ensure_git_status_clean
      ensure_git_branch(branch: "develop")
-     sh("git checkout -b buildBumpBranch1")
+     sh("git checkout -b buildBumpBranch2")
      cert
      sigh(force:true)
      build_app(scheme:"FastlaneTest",
@@ -71,9 +74,10 @@ end
      increment_build_number(xcodeproj: "FastlaneTest.xcodeproj")
      sh("git add .")
      sh("git commit -m 'Version bumped'")
-     commit_version_bump(message: "Build Version Bump by fastlane",
-	                 xcodeproj: "FastlaneTest.xcodeproj")
-     push_to_git_remote
+	push_to_git_remote
+     #commit_version_bump(message: "Build Version Bump by fastlane",
+	                 #xcodeproj: "FastlaneTest.xcodeproj")
+     
      create_pull_request(repo: "Jushrita/Fastlane",
 			title: "build no. bumped",
 			head: "buildBumpBranch1",

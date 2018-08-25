@@ -5,44 +5,69 @@
     
     
       
-<<<<<<< HEAD
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.004959">
-=======
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.004938">
->>>>>>> b330448f7f618d1be2c50f22c2db6ad7cde8d788
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.005378">
         
       </testcase>
     
       
-<<<<<<< HEAD
-      <testcase classname="fastlane.lanes" name="1: git checkout develop" time="0.035674">
+      <testcase classname="fastlane.lanes" name="01: git checkout develop" time="0.015936">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: git pull origin develop" time="1.135869">
+      <testcase classname="fastlane.lanes" name="02: git pull origin develop" time="1.124024">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: ensure_git_status_clean" time="0.013171">
+      <testcase classname="fastlane.lanes" name="03: ensure_git_status_clean" time="0.009991">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: ensure_git_branch" time="0.009146">
+      <testcase classname="fastlane.lanes" name="04: ensure_git_branch" time="0.006851">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="5: git checkout buildBumpBranch1" time="0.009446">
+      <testcase classname="fastlane.lanes" name="05: git checkout -b buildBumpBranch1" time="0.016348">
         
-          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/fast_file.rb:186:in `sh'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/fast_file.rb:181:in `sh'&#10;Fastfile:65:in `block in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/lane_manager.rb:56:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:74:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:41:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/cli_tools_distributor.rb:108:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command 'git checkout buildBumpBranch1' was 1 instead of 0.&#10;error: pathspec 'buildBumpBranch1' did not match any file(s) known to git.&#10;" />
-=======
-      <testcase classname="fastlane.lanes" name="1: git checkout develop" time="0.028153">
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: cert" time="5.238098">
         
-          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/fast_file.rb:186:in `sh'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/fast_file.rb:181:in `sh'&#10;Fastfile:61:in `block in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/lane_manager.rb:56:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:74:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:41:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/cli_tools_distributor.rb:108:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command 'git checkout develop' was 1 instead of 0.&#10;error: Your local changes to the following files would be overwritten by checkout:&#10;	FastlaneTest/FastlaneTest.xcodeproj/project.pbxproj&#10;	FastlaneTest/FastlaneTest.xcworkspace/xcuserdata/jushrita.xcuserdatad/UserInterfaceState.xcuserstate&#10;	FastlaneTest/FastlaneTest/Info.plist&#10;	FastlaneTest/FastlaneTestTests/Info.plist&#10;	FastlaneTest/fastlane/Fastfile&#10;	FastlaneTest/fastlane/report.xml&#10;Please commit your changes or stash them before you switch branches.&#10;Aborting&#10;" />
->>>>>>> b330448f7f618d1be2c50f22c2db6ad7cde8d788
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: sigh" time="14.275762">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: build_app" time="25.212153">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: get_build_number" time="0.344256">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: increment_build_number" time="1.094548">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: git add ." time="0.008781">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="12: git commit -m 'Version bumped'" time="0.021021">
+        
+          <failure message="/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/actions/actions_helper.rb:48:in `execute_action'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/fast_file.rb:186:in `sh'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/fast_file.rb:181:in `sh'&#10;Fastfile:73:in `block in parsing_binding'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/lane.rb:33:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:45:in `chdir'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/runner.rb:45:in `execute'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/lane_manager.rb:56:in `cruise_lane'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/command_line_handler.rb:36:in `handle'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:108:in `block (2 levels) in run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:178:in `call'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/command.rb:153:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/runner.rb:476:in `run_active_command'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:74:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/commander-fastlane-4.4.6/lib/commander/delegates.rb:15:in `run!'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:333:in `run'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/commands_generator.rb:41:in `start'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/fastlane/lib/fastlane/cli_tools_distributor.rb:108:in `take_off'&#10;/Library/Ruby/Gems/2.3.0/gems/fastlane-2.102.0/bin/fastlane:20:in `&lt;top (required)&gt;'&#10;/usr/local/bin/fastlane:22:in `load'&#10;/usr/local/bin/fastlane:22:in `&lt;main&gt;'&#10;&#10;Exit status of command 'git commit -m 'Version bumped'' was 1 instead of 0.&#10;On branch buildBumpBranch1&#10;Changes not staged for commit:&#10;	modified:   ../AppStore_com.getmyParking.FastlaneTest.mobileprovision&#10;	modified:   ../FastlaneTest.xcodeproj/project.pbxproj&#10;	modified:   ../FastlaneTest/Info.plist&#10;	modified:   ../FastlaneTestTests/Info.plist&#10;	modified:   ../build/FirstGymBuild.app.dSYM.zip&#10;	modified:   ../build/FirstGymBuild.ipa&#10;&#10;no changes added to commit&#10;" />
         
       </testcase>
     
