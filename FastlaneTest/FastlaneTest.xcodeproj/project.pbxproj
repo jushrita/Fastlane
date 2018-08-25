@@ -457,6 +457,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DWLB7GQMW9;
 				INFOPLIST_FILE = FastlaneTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,6 +484,7 @@
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = DWLB7GQMW9;
 				INFOPLIST_FILE = FastlaneTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

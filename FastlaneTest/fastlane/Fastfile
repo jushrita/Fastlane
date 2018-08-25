@@ -62,7 +62,11 @@ end
      sh("git pull origin develop")
      ensure_git_status_clean
      ensure_git_branch(branch: "develop")
+<<<<<<< HEAD
      sh("git checkout -b buildBumpBranch1")
+=======
+     sh("git checkout buildBumpBranch1")
+>>>>>>> b330448f7f618d1be2c50f22c2db6ad7cde8d788
 
      cert
      sigh(force:true)
