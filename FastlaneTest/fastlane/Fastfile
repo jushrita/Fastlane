@@ -62,10 +62,6 @@ end
      sh("git commit -m 'Some1'")
      push_to_git_remote
      sh("git checkout develop")
-     sh("git pull origin develop")
-     sh("git add .")
-     sh("git commit -m 'Some2'")
-     push_to_git_remote
      ensure_git_status_clean 
      ensure_git_branch(branch: "develop")
      sh("git checkout -b buildBumpBranch2")
