@@ -57,11 +57,11 @@ end
    end
 
   lane :beforeDistribution do
-     sh("git checkout develop")
-     sh("git pull origin develop")
-     ensure_git_status_clean
-     ensure_git_branch(branch: "develop")
-     sh("git checkout buildBumpBranch")
+     #sh("git checkout develop")
+     #sh("git pull origin develop")
+     #ensure_git_status_clean
+     #ensure_git_branch(branch: "develop")
+     #sh("git checkout buildBumpBranch")
 
      cert
      sigh(force:true)
@@ -70,7 +70,7 @@ end
      get_build_number
      increment_build_number(xcodeproj: "FastlaneTest.xcodeproj")
      sh("git add .")
-     sh("git commit -m Fastfile changes")
+     sh("git commit -m 'Fastfile changes'")
      sh("git push origin buildBumpBranch")
      commit_version_bump(message: "Build Version Bump by fastlane",
 	                 xcodeproj: "FastlaneTest.xcodeproj")
