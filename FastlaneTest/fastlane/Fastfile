@@ -57,14 +57,14 @@ end
    end
 
   lane :beforeDistribution do
-     sh("git checkout develop")
-     sh("git pull origin develop")
+     #sh("git checkout develop")
+     #sh("git pull origin develop")
      #ensure_git_status_clean
      ensure_git_branch(branch: "develop")
      sh("git checkout buildBumpBranch")
 
-     cert
-     sigh(force:true)
+     #cert
+     #sigh(force:true)
      build_app(scheme:"FastlaneTest",
 		sdk: "iOS 11.4"	)
      get_build_number
